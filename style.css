@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  background: #050505;
+  color: #f5f5f5;
+  font-family: -apple-system, BlinkMacSystemFont, "Hiragino Sans", sans-serif;
+}
+
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 32px 18px 64px;
+}
+
+.hero {
+  padding: 36px 0;
+}
+
+.label {
+  color: #999;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+}
+
+h1 {
+  font-size: 56px;
+  margin: 8px 0 24px;
+}
+
+h2 {
+  font-size: 24px;
+  margin: 36px 0 16px;
+}
+
+.total {
+  display: flex;
+  gap: 12px;
+}
+
+.total div {
+  flex: 1;
+  background: #151515;
+  border: 1px solid #333;
+  border-radius: 18px;
+  padding: 20px;
+  font-size: 22px;
+}
+
+.total strong {
+  display: block;
+  font-size: 42px;
+  margin-top: 8px;
+}
+
+.summary {
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 18px;
+  border-bottom: 1px solid #252525;
+  font-size: 20px;
+}
+
+.summary-row:last-child {
+  border-bottom: none;
+}
+
+.short {
+  font-weight: 700;
+}
+
+.score {
+  color: #ddd;
+}
+
+.stages {
+  display: grid;
+  gap: 22px;
+}
+
+.stage-card {
+  background: #111;
+  border: 1px solid #333;
+  border-radius: 24px;
+  padding: 18px;
+}
+
+.stage-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  align-items: flex-start;
+}
+
+.stage-short {
+  color: #aaa;
+  margin: 0 0 4px;
+}
+
+h3 {
+  font-size: 24px;
+  margin: 0 0 16px;
+}
+
+.stage-score {
+  text-align: right;
+  font-weight: 700;
+  line-height: 1.7;
+}
+
+.stage-score span {
+  display: block;
+}
+
+img {
+  width: 100%;
+  border-radius: 16px;
+  border: 1px solid #333;
+  background: #000;
+}
+
+.memo {
+  color: #aaa;
+  font-size: 14px;
+}
