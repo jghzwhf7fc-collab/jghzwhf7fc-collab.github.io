@@ -1,10 +1,66 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 <head>
-  <title>My Profile</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>乱獲記録</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Hello!</h1>
-  <p>このページは作成中です。</p>
+  <main class="page">
+    <section class="hero">
+      <p class="label">Salmon Run Records</p>
+      <h1>乱獲記録</h1>
+      <div class="total">
+        <div><span>☀️</span><strong id="totalDay"></strong></div>
+        <div><span>🌙</span><strong id="totalNight"></strong></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>ステージサマリ</h2>
+      <div id="summary" class="summary"></div>
+    </section>
+
+    <section class="section">
+      <h2>ステージ別スクショ</h2>
+      <div id="stages" class="stages"></div>
+    </section>
+  </main>
+
+  <script src="data.js"></script>
+  <script>
+    document.getElementById("totalDay").textContent = record.total.day;
+    document.getElementById("totalNight").textContent = record.total.night;
+
+    const summary = document.getElementById("summary");
+    const stages = document.getElementById("stages");
+
+    record.stages.forEach(stage => {
+      summary.innerHTML += `
+        <div class="summary-row">
+          <span class="short">${stage.short}</span>
+          <span class="score">☀️ ${stage.day} / 🌙 ${stage.night}</span>
+        </div>
+      `;
+
+      stages.innerHTML += `
+        <article class="stage-card">
+          <div class="stage-head">
+            <div>
+              <p class="stage-short">${stage.short}</p>
+              <h3>${stage.name}</h3>
+            </div>
+            <div class="stage-score">
+              <span>☀️ ${stage.day}</span>
+              <span>🌙 ${stage.night}</span>
+            </div>
+          </div>
+          <img src="${stage.image}" alt="${stage.name}のスクショ" />
+          <p class="memo">${stage.memo}</p>
+        </article>
+      `;
+    });
+  </script>
 </body>
 </html>
